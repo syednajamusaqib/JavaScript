@@ -38,7 +38,7 @@ do{
 	scores++;
 } while(scores <=5);
 
-// for each loop
+// for of loop
 
 let arr = [9,8,7,6,5,4];
 for (const a of arr) {
