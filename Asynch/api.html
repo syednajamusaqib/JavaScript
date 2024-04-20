@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API INTRO</title>
+</head>
+<body style="background : #212121">
+    
+</body>
+<script>
+    const url = 'https://api.github.com/users/syednajamusaqib';
+    const xhr = new XMLHttpRequest();
+    let najam;
+    xhr.open('GET',url);
+    xhr.onreadystatechange = function(){
+      if(xhr.readyState === 4){
+        console.log(this.response);
+        const data = JSON.parse(this.response);
+        console.log(data);
+        najam = data.followers;
+      }
+      console.log(najam);
+    };
+    xhr.send();
+</script>
+</html>

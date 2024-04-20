@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Continous Color Changer</title>
+  </head>
+  <body style="background-color: #212121; color: #fff">
+    <h1>Start should change the Background color every second</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <script>
+        // console.log("1");
+        let hex = "abdchgfgghjdftdr5694920";
+        // console.log(hex.length);
+        // console.log(rand);
+        function anon(){
+            let string = "";
+            for(let i = 0; i < 5; i++){
+                let rand = (Math.floor(Math.random() * 22)) + 1;
+                string += hex[rand];
+            }
+            return string;
+        }
+        let newStr = anon();
+        console.log(newStr);
+        const start = document.querySelector("#start");
+        const a = setInterval(() => {
+            start.textContent = anon();
+        }, 2000)
+        const stop = document.querySelector("#stop");
+        
+        stop.addEventListener("click", () => {
+            clearInterval(a);
+            console.log("Stopped");
+        })
+
+        setTimeout(() => {
+            console.log("2");
+        }, 0)
+        console.log("3");
+
+
+    </script>
+  </body>
+</html>

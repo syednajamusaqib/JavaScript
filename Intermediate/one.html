@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .bg-count{
+            background-color: #212121;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body class="bg-count">
+    <div class="language">
+        <li>JavaScript</li>
+    </div>
+</body>
+<script>
+    
+    // Creating New Elements using Functions
+    function addElement(langName, color, padding, bgcolor, padding, margin){
+        const li = document.createElement('li');
+        const text = document.createTextNode(langName);
+        li.style.color = color;
+        li.style.margin = margin;
+        li.style.backgroundColor = bgcolor;
+        li.style.padding = padding;
+        // li.style.padding = padding;
+        li.appendChild(text);
+        document.querySelector('.language').appendChild(li);
+    }
+
+    addElement('python','green','12px','black','12px','10px');
+    addElement('Cpp','red','12px','#f54f32','12px','10px');
+    addElement('Java','orange','12px','white','12px','10px');
+    addElement('C','Black','12px','green','12px','10px');
+
+    // Editing (Replacing python with Mojo)
+
+    const element = document.querySelector('li:nth-child(2)');
+    // console.log(element);
+    const newLi = document.createElement('li');
+    newLi.innerHTML = "Mojo";
+    element.replaceWith(newLi);
+
+    // Removing element
+
+    const remove = document.querySelector('li:nth-child(2)');
+    remove.remove();
+
+
+</script>
+</html>

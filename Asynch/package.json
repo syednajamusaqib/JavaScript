@@ -1,0 +1,13 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "Description of your package",
+  "main": "promises.js",
+  "type": "module", 
+  "scripts": {
+    "start": "node promises.js"
+  },
+  "dependencies": {
+    "node-fetch": "^3.0.0"
+  }
+}

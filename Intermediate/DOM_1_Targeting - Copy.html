@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .bg-count{
+            background-color: #212121;
+            color: #ffffff;
+            padding: 30px;
+            line-height: 1.5;
+        }
+
+    </style>
+</head>
+<body class="bg-count">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const result = document.querySelector('.parent');
+    console.log(result);
+    console.log(result.children);
+    console.log(result.children[0].innerText);
+
+    for(let i=0;i<result.children.length;i++){
+        console.log(result.children[i].innerText);
+    }
+
+    console.log(result.children[1].style.color = 'green');
+    console.log(result.firstElementChild);
+    console.log(result.lastElementChild);
+
+    // const dayOne = result.querySelector('.day');
+    // console.log(dayOne);
+    // console.log(dayOne.parentElement); // to get parent element
+    // console.log(dayOne.nextElementSibling);
+    console.log(result.childNodes); // enter is also a child Node
+
+    for(i = 0; i < result.childNodes.length; i++){
+        console.log(result.childNodes[i]);
+    }
+
+    const parent = document.querySelector(".parent");
+    // console.log(parent);
+
+    // console.log(parent.children); // Get children of parent
+
+    const item = parent.children;
+
+    // for(let i = 0; i < item.length; i++){ // Node List so you can use loop
+    //     console.log(item[i].innerText);
+    //     let flag = 0;
+    //     if(i % 2 == 0){
+    //         item[i].style.color = "red";
+    //     }else{
+    //         item[i].style.color = "green";
+    //     }
+    // }
+
+    // console.log(parent.lastElementChild);
+    // console.log(parent.firstElementChild);
+
+    // const day = document.querySelector(".day")
+    // console.log(day.nextElementSibling);
+
+
+    // Interesting Part
+
+    // console.log(parent.childNodes); // It gives 9 but we have only 4 childs 
+
+    // Every text or line break is also considered a node so 9 is ans
+    
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>

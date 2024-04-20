@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM manipulation</title>
+    <style>
+        .main{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="main">
+    <div class="language">
+        <li>JavaScript</li>
+    </div>
+    
+</body>
+<script>
+    function addElement(langName){
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`;
+        document.querySelector('.language').appendChild(li);
+    }
+
+    // addElement('Python');
+    // addElement('Java');
+
+    // Optimized Approach
+
+    function addBYOptimization(LangName,color,bgcolor,padding,radius,margin){
+        const li = document.createElement('li');
+        const text = document.createTextNode(LangName);
+        li.style.color = color;
+        li.style.borderRadius = radius;
+        li.style.padding = padding;
+        li.style.margin = margin;
+        li.style.backgroundColor = bgcolor;
+        li.appendChild(text);
+        document.querySelector('.language').appendChild(li);
+        console.log(li);
+    }
+
+    addBYOptimization('Cpp','red','green','12px','12px','10px');
+    addBYOptimization('java','orange','white','12px','12px','10px');
+    addBYOptimization('GoLang','#f54f32','black','12px','12px','10px');
+    addBYOptimization('GoLang','#f54f32','black','12px','12px','10px');
+
+</script>
+</html>

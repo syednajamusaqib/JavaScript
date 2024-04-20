@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynch JS</title>
+</head>
+<body>
+    <h1>Asynchronus JavaScript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // Investigating setInterval
+    const sayDate = ()=>{
+        console.log("Najam",Date.now());
+    };
+    // Want to stop it
+    // const interval = setInterval(sayDate,1000);
+    // clearInterval(interval);
+    let interval;
+    const start = document.querySelector('#start');
+    const stopit = document.querySelector('#stop');
+    
+    start.addEventListener('click',()=>{
+        interval = setInterval(sayDate,1000);
+        console.log("Clicked");
+    });
+
+    stopit.addEventListener('click',()=>{
+        clearInterval(interval);
+        console.log("Stopped");
+    });
+
+</script>
+</html>

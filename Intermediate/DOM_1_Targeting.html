@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .bg-count{
+            background-color: #212121;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body class="bg-count">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const result = document.querySelector('.parent');
+    console.log(result);
+    console.log(result.children);
+    // console.log(result.children[0].innerText);
+
+    for(let i=0;i<result.children.length;i++){
+        console.log(result.children[i].innerText);
+    }
+
+    console.log(result.children[1].style.color = 'red');
+    // console.log(result.firstElementChild);
+    // console.log(result.lastElementChild);
+
+    const dayOne = result.querySelector('.day');
+    console.log(dayOne);
+    console.log(dayOne.parentElement); // to get parent element
+    console.log(dayOne.nextElementSibling);
+    console.log(result.childNodes); // enter is also a child Node
+
+</script>
+</html>

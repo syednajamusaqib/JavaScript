@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynch JS</title>
+</head>
+<body>
+    <h1>Asynchronus JavaScript</h1>
+    <button id="button">Stop</button>
+</body>
+<script>
+    // Investigating setTimeout function
+    // setTimeout(()=>{
+    //     console.log("Najam U Saqib");
+    // },2000)
+    // You can also give reference of function
+    const name = ()=>{
+        console.log("Najam u Saqib");
+    }
+    setTimeout(name,2000);
+    // Changing text on web page
+    const changedText = document.querySelector('h1');
+    const change = function(){
+        changedText.innerHTML = "Non-Blocking JavaScript";
+    };
+
+    const ref = setTimeout(change,2500);
+
+    // Let say you want to stop timeout
+    // Give reference of setTimeout to clearTimeout
+    const button = document.querySelector('#button');
+    button.addEventListener('click',()=>{
+        clearTimeout(ref);
+        console.log("Stopped");
+    });
+</script>
+</html>

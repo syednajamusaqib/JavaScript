@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur Code</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="lang">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    // function addElement(langName){ // less optimizied as discussed in prev chap
+    //     const li = document.createElement('li');
+    //     li.innerHTML = `${langName}`;
+    //     document.querySelector('.lang').appendChild(li);
+    // }
+
+    // addElement('Python');
+    // addElement('Cpp');
+    // addElement('Ruby on Rails');
+
+    // function optimized(langName){
+    //     const li = document.createElement('li');
+    //     const text = document.createTextNode(langName);
+    //     li.appendChild(text);
+    //     document.querySelector('.lang').appendChild(li);
+    // }
+
+    // optimized('C#');
+    // optimized('C');
+    const target = document.querySelector(".lang")
+    function coding(name,color){
+        const li = document.createElement('li');
+        li.style.color = color;
+        const text = document.createTextNode(name);
+        li.appendChild(text);
+        target.appendChild(li);
+    }
+
+    coding("C++","green");
+    coding("C#","#dadada");
+</script>
+</html>

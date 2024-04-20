@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur Code</title>
+    <style>
+        .bg-count{
+            background-color: #212121;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body class="bg-count">
+    
+</body>
+<script>
+    // const div = document.createElement('div');
+    // console.log(div);
+    // div.className = 'main';
+    // div.id = "hello";
+    // div.style.backgroundColor = 'green';
+    // div.style.padding = '12px';
+    // div.setAttribute("title","DOM");
+    // // div.innerText = "Syed Najam"; // Less effecient(fast)
+    // const text = document.createTextNode("Syed Najam");
+    // div.appendChild(text); // Bit more effecient try to use this
+    // document.body.appendChild(div);
+
+
+    const div = document.createElement("div");
+    div.className = "div";
+    div.id = "divId";
+    div.setAttribute("title","DOM");
+    div.style.color = "green";
+    // Create text node
+    // First Method
+    // div.innerText = "Syed Najam";
+    // Second Method (preffered One)
+    const text = document.createTextNode("Syed Najam");
+    div.appendChild(text);
+    // document.appendChild(div);
+
+    document.body.appendChild(div);
+    console.log(div);
+
+
+
+</script>
+</html>
